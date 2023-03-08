@@ -3,33 +3,36 @@
 
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">Register (^ o ^) 丿</span>
+    <span class="navbar-brand mb-0 h1">Register (^ o ^)</span>
   </div>
 </nav>
 
 <form action= "/store" method="Post">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" name="exampleInputEmail1" aria-describedby="emailHelp">
+<div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" name="name">
+    <div name="name" class="form-text">Enter name here.</div>
+  </div>
+<div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
     <div name="email" class="form-text">Enter a valid Email please.</div>
   </div>
   <div class="mb-3">
     <label for="password" class="form-label">Password</label>
     <input type="password" class="form-control" name="password">
-    <div name="passwordHelpBlock" class="form-text">
-      Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+    <div name="passwordHelpBlock" class="form-text"> Your password here.
     </div>
   </div>
   <div class="mb-3">
     <label for="confirmInputPassword1" class="form-label">Confirm Password</label>
     <input type="password" class="form-control" name="password_confirmation">
-    <div name="passwordHelpBlock" class="form-text">
-      re-enter your password.
+    <div name="passwordHelpBlock" class="form-text">Re-enter your password.
     </div>    
-  </div>  
+  <!--</div>  
     <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Remeber Me</label>
-  </div>
+  </div>-->
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form @CSVR>

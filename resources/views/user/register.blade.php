@@ -8,26 +8,27 @@
 </nav>
 
 <form action= "/store" method="post">
+    @csrf
 <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
+    <label for="name1" class="form-label">Name</label>
     <input type="text" class="form-control" name="name">
-    <div class="form-text">Enter name here.</div>
+
   </div>
 <div class="mb-3">
-    <label for="email" class="form-label">Email address</label>
+    <label for="email1" class="form-label">Email address</label>
     <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
-    <div class="form-text">Enter a valid Email please.</div>
+
   </div>
   <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
+    <label for="password1" class="form-label">Password</label>
     <input type="password" class="form-control" name="password">
-    <div class="form-text">Your password here.
+
     </div>
   </div>
   <div class="mb-3">
-    <label for="password_confirmation" class="form-label">Confirm Password</label>
+    <label for="password1" class="form-label">Confirm Password</label>
     <input type="password" class="form-control" name="password_confirmation">
-    <div class="form-text">Re-enter your password.
+
     </div>    
   <!--</div>  
     <div class="mb-3 form-check">
@@ -35,4 +36,4 @@
     <label class="form-check-label" for="exampleCheck1">Remeber Me</label>
   </div>-->
   <button type="submit" class="btn btn-primary">Submit</button>
-</form @CSVR>
+</form>

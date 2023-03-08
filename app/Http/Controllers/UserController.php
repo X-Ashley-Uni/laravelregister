@@ -14,8 +14,9 @@ class UserController extends Controller
 
     }
     public function store(Request $req){
-        return "testing";
+
         @dd($req);
+
         //$validated=$req->validate([
         //    "name"=>['required, min:4'],
         //    "email"=>['required', 'email', Ru::unique('users','email')],

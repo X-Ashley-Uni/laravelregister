@@ -7,27 +7,27 @@
   </div>
 </nav>
 
-<form action= "/store" method="Post">
+<form action= "/store" method="post">
 <div class="mb-3">
     <label for="name" class="form-label">Name</label>
     <input type="text" class="form-control" name="name">
-    <div name="name" class="form-text">Enter name here.</div>
+    <div class="form-text">Enter name here.</div>
   </div>
 <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
     <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
-    <div name="email" class="form-text">Enter a valid Email please.</div>
+    <div class="form-text">Enter a valid Email please.</div>
   </div>
   <div class="mb-3">
     <label for="password" class="form-label">Password</label>
     <input type="password" class="form-control" name="password">
-    <div name="passwordHelpBlock" class="form-text"> Your password here.
+    <div class="form-text">Your password here.
     </div>
   </div>
   <div class="mb-3">
-    <label for="confirmInputPassword1" class="form-label">Confirm Password</label>
+    <label for="password_confirmation" class="form-label">Confirm Password</label>
     <input type="password" class="form-control" name="password_confirmation">
-    <div name="passwordHelpBlock" class="form-text">Re-enter your password.
+    <div class="form-text">Re-enter your password.
     </div>    
   <!--</div>  
     <div class="mb-3 form-check">

@@ -12,7 +12,22 @@ class UserController extends Controller
     public function register(){
         return view('user.register');
 
+    }    
+    
+    public function process(Request $req){
+        // @dd($req);
+        $validated=$req->validate([
+            "email"=>['required','email'],
+            "password"=>'required'
+
+        ]);
+
+        if(auth()->attempt($validated)){
+            $req->session()->regenerate();
+            return redirect("/");
+        };
     }
+
     public function store(Request $req){
         //@dd($req);
         $validated=$req->validate([
@@ -27,4 +42,8 @@ class UserController extends Controller
         return redirect("/");
         
     }
+    public function login(){
+        return view ('user.login');
+    }
+
 }

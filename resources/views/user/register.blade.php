@@ -12,12 +12,16 @@
 <div class="mb-3">
     <label for="name1" class="form-label">Name</label>
     <input type="text" class="form-control" name="name">
-
+  @error('name')
+  <p>Error! Name should be atleast 4 characters long</p>
+  @enderror
   </div>
 <div class="mb-3">
     <label for="email1" class="form-label">Email address</label>
     <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
-
+  @error('email')
+  <p>Email Already Exists!</p>
+  @enderror
   </div>
   <div class="mb-3">
     <label for="password1" class="form-label">Password</label>

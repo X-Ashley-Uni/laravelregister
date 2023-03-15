@@ -23,3 +23,5 @@ Route::get('login',[UserController::class,'login']);
 Route::post('/login/process',[UserController::class,'process']);
 
 Route::get('logout',[UserController::class,'logout']);
+
+Route::get('delete/{id}',[CustomerController::class,'delete']);

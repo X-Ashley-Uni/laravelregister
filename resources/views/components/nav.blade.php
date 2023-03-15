@@ -18,6 +18,11 @@
             <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
             </li>
+            <li>
+            <li class="nav-item">
+            <a class="nav-link" href="logout">LOG OUT</a>
+            </li>
+
         </ul>
         </div>
     </div>

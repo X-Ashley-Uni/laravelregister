@@ -21,3 +21,5 @@ Route::post('/store',[UserController::class,'store']);
 
 Route::get('login',[UserController::class,'login']);
 Route::post('/login/process',[UserController::class,'process']);
+
+Route::get('logout',[UserController::class,'logout']);

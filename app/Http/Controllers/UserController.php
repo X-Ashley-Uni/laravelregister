@@ -15,7 +15,7 @@ class UserController extends Controller
     }    
     
     public function process(Request $req){
-        // @dd($req);
+        //  @dd($req);
         $validated=$req->validate([
             "email"=>['required','email'],
             "password"=>'required'
@@ -29,7 +29,6 @@ class UserController extends Controller
     }
 
     public function store(Request $req){
-        //@dd($req);
         $validated=$req->validate([
             "name"=>['required', 'min:4'],
             "email"=>['required', 'email', Rule::unique('users','email')],
@@ -44,6 +43,13 @@ class UserController extends Controller
     }
     public function login(){
         return view ('user.login');
+    }
+    public function logout(Request $req){
+        // @dd($req);
+        auth()->logout();
+        $req->session()->invalidate();
+        $req->session()->regenerateToken();
+        return redirect('/login');
     }
 
 }

@@ -15,7 +15,6 @@
     <h1>Edit Customer</h1>
     <form action="/updateCustomer" method="post">
 @csrf
-    <h1>Add Customer</h1>
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">ID</label>
         <div class="col-sm-10">

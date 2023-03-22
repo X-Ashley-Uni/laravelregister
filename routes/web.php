@@ -29,6 +29,6 @@ Route::get('delete/{id}',[CustomerController::class,'delete']);
 Route::get('addCustomer',[CustomerController::class,'addCustomer']);
 Route::post('saveCustomer', [CustomerController::class,'saveCustomer']);
 
-//Route::get('edit/{id}', [CustomerController::class,'edit']);
+Route::get('edit/{id}', [CustomerController::class,'edit']);
 //Route::get('updateCustomer/{id}',[CustomerController::class,'updateCustomer']);
-Route::post('updateCustomer/{id}', [CustomerController::class,'updateCustomer']);
+Route::post('updateCustomer', [CustomerController::class,'updateCustomer']);

@@ -39,10 +39,10 @@ class CustomerController extends Controller
         return redirect("/")->with('sucess', 'Customer Added Successfully.');    
     }
 
-    //public function editCustomer($id){
-    //    $data=Customer::findorFail($id);
-   //     return view('customer.edit', ['customer'=>$data]);
-    //}
+    public function edit($id){
+        $data=Customer::findorFail($id);
+         return view('customer.edit', ['customer'=>$data]);
+    }
     public function updateCustomer(Request $req){
         $req->validate([
             "lastName"=>['required', 'min:4'],

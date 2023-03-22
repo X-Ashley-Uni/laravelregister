@@ -18,7 +18,7 @@
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">ID</label>
         <div class="col-sm-10">
-        <input type="hidden" class="form-control" id="Id" name="lastName" value ="{{$customer->id}}" placeholder="Last Name">
+        <input type="hidden" class="form-control" id="Id" name="id" value ="{{$customer->id}}">
         </div>
     </div>
     <div class="form-group row">

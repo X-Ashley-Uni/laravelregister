@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 
 class CustomerController extends Controller
 {
@@ -20,5 +21,46 @@ class CustomerController extends Controller
         ->with("success", "Customer Deleted Successfully");
     }
 
+    public function addCustomer(){
+        return view('customer.add');
+    }
 
+    public function saveCustomer(Request $req){
+        //dd($req);
+        $validated=$req->validate([
+            "lastName"=>['required', 'min:4'],
+            "firstName"=>['required', 'min:4'],
+            "email"=>['required', 'email'],
+            "contactNumber"=>['required', 'min:11'],
+            "address"=>['required', 'min:4']
+        ]);
+        
+        $data=Customer::create($validated);
+        return redirect("/")->with('sucess', 'Customer Added Successfully.');    
+    }
+
+    //public function editCustomer($id){
+    //    $data=Customer::findorFail($id);
+   //     return view('customer.edit', ['customer'=>$data]);
+    //}
+    public function updateCustomer(Request $req){
+        $req->validate([
+            "lastName"=>['required', 'min:4'],
+            "firstName"=>['required', 'min:4'],
+            "email"=>['required', 'email'],
+            "contactNumber"=>['required', 'min:11'],
+            "address"=>['required', 'min:4']
+        ]);
+    
+        $data=Customer::find($req->id);
+        $data->lastname=$req->lastName;
+        $data->firstname=$req->firstName;
+        $data->email=$req->email;
+        $data->contactNumber=$req->contactNumber;
+        $data->address=$req->address;
+        $data->save();
+        return redirect("/")->with('success', 'Customer Edited Successfully.');
+
+    }
 }
+ 
